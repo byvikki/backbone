@@ -2,7 +2,7 @@
 
 require_once "SOAP/Client.php";
 
-$sp_server_url = "http://localhost/myphp/index.php";
+$sp_server_url = "http://localhost/myphp/server.php";
 
 $sc = new SOAP_Client($sp_server_url);
 
