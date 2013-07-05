@@ -25,7 +25,7 @@ $service = new SomeService();
 $ss = new SOAP_SERVER();
 
 //assigning a name to the service
-$ss->addObjectMap($service, "urn:SomeService");
+$ss->addObjectMap(&$service, "urn:SomeService");
 
 //POST Data to the service
 
@@ -41,7 +41,10 @@ if(isset($_SERVER['QUERY_STRING']) && strcasecmp($_SERVER['QUERY_STRING'], 'wsdl
 }
 
 else{
+	
 	$ss->service($HTTP_RAW_POST_DATA);
+
+
 }
 
 
